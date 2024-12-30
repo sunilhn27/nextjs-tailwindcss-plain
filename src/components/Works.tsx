@@ -29,15 +29,15 @@ const Work: React.FC<Work> = ({ icon, title, param }) => {
 
 function Works() {
   return (
-    <section className="mb-12 py-11 font-nunito mx-6">
+    <section className="mb-12 py-11 font-nunito mx-6" id="projects">
       <div className="flex justify-center items-center text-center">
         <div className="flex flex-col">
-          <h3>Work</h3>
-          <h1 className="mt-0 w-[14rem]">Some of our Recent Works</h1>
+          <h3 className="text-[#F94F4F]">Works</h3>
+          <h1 className="mt-0 w-[21rem] font-bold text-3xl">Some of our Recent Works</h1>
         </div>
       </div>
 
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center mt-10">
         <div className="grid grid-cols-4 2xl:grid-cols-5 gap-6">
           <Work icon={CreativeDesign} title="Creative Design" param="UIdeck" />
           <Work icon={webdesign} title="Web Design" param="UIdeck" />
