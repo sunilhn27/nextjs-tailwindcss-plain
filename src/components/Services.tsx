@@ -4,6 +4,7 @@ import Seo from "../../public/images/seo.png";
 import MobileApps from "../../public/images/phone.png";
 import Research from "../../public/images/research.png";
 import Image from "next/image";
+import { ZoomIn, AnimationLeft, AnimationRight } from "./AnimationWrapper";
 
 interface Card {
   icon: StaticImageData;
@@ -13,15 +14,17 @@ interface Card {
 
 const Service: React.FC<Card> = ({ icon, title, param }) => {
   return (
-    <div className="w-[22rem] h-[21rem] border-2 border-gray-300 border-dashed rounded-2xl shadow-md">
-      <div className="flex flex-col justify-center items-center text-center py-10">
-        <div className="bg-[#FFF1F1] rounded-full p-4">
-          <Image src={icon} alt="seo" />
+    <AnimationLeft delay={1}>
+      <div className="w-[22rem] h-[21rem] border-2 border-gray-300 border-dashed rounded-2xl shadow-md">
+        <div className="flex flex-col justify-center items-center text-center py-10">
+          <div className="bg-[#FFF1F1] rounded-full p-4">
+            <Image src={icon} alt="seo" />
+          </div>
+          <h1 className="w-[6rem] text-[1.4rem] font-bold"> {title}</h1>
+          <p className="mt-6 text-gray-600">{param}</p>
         </div>
-        <h1 className="w-[6rem] text-[1.4rem] font-bold"> {title}</h1>
-        <p className="mt-6 text-gray-600">{param}</p>
-      </div>
-    </div>
+      </div>{" "}
+    </AnimationLeft>
   );
 };
 
@@ -70,7 +73,6 @@ accusam et justo duo dolores"
 aliquyam erat, sed diam voluptua. At vero eos
 accusam et justo duo dolores"
           />
-
           <Service
             icon={Seo}
             title="Graphic Design"
@@ -78,7 +80,6 @@ accusam et justo duo dolores"
 aliquyam erat, sed diam voluptua. At vero eos
 accusam et justo duo dolores"
           />
-
           <Service
             icon={MobileApps}
             title="Business Consultancy"
