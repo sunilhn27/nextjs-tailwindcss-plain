@@ -17,7 +17,7 @@ function NavBar() {
             </Link>
             <Link
               className="hover:text-orange-500 cursor-pointer no-underline"
-              href={"/"}
+              href={"#services"}
             >
               Services
             </Link>
@@ -29,19 +29,19 @@ function NavBar() {
             </Link>
             <Link
               className="hover:text-orange-500 cursor-pointer no-underline"
-              href={"/"}
+              href={"#projects"}
             >
               Projects
             </Link>
             <Link
               className="hover:text-orange-500 cursor-pointer no-underline"
-              href={"/"}
+              href={"#blogs"}
             >
               Blog
             </Link>
             <Link
               className="hover:text-orange-500 cursor-pointer no-underline"
-              href={"/"}
+              href={"#contact"}
             >
               Contact
             </Link>
